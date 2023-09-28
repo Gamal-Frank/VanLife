@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const NavBar = () => {
   return (
-    <div className="w-full justify-around h-20 flex  items-center ">
+    <div className="w-full justify-around h-20 flex bg-[#FFF7ED]  items-center ">
       <Link to="/">
         <img className="w-full h-full" src="/VANLIFE.png" alt="logo" />
       </Link>

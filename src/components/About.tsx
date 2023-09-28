@@ -19,7 +19,7 @@ const About = () => {
           Our team is full of vanlife enthusiasts who know firsthand the magic
           of touring the world on 4 wheels.
         </h2>
-        <div className="w-[494px] mt-20 h-[198px] pt-[30px] pl-[30px] rounded-md bg-[#FFCC8D]">
+        <div className="sm:w-[494px] pr-5 absolute top-[690px] mt-20 h-[198px] pt-[30px] pl-[30px] rounded-md bg-[#FFCC8D]">
           <h3 className="text-[24px] text-[#161616] font-bold">
             Your destination is waiting.
             <br /> Your van is ready.

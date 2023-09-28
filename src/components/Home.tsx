@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className=" flex justify-center items-center bg-HomeBg bg-cover h-[100vh] w-full">
+    <div className=" flex px-10 justify-center items-center bg-HomeBg bg-cover h-[100vh] w-full">
       <div className="w-[494.33px]">
         <h1 className=" w- text-white font-bold text-[36px]">
           You got the travel plans, we got the travel vans.
