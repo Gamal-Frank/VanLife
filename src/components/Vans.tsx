@@ -1,15 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Van from "./van";
-export interface van {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  imageUrl: string;
-  type: string;
-}
+import { MyContext, van } from "../Context.tsx/Context";
 const Vans = () => {
-  const [vans, setVans] = useState<van[]>([]);
+  const vans = useContext(MyContext);
   const [filterdVans, setFilterdVans] = useState<van[]>([]);
   function Filter(type?: string) {
     if (type) {
@@ -18,16 +11,6 @@ const Vans = () => {
       setFilterdVans([]);
     }
   }
-  useEffect(() => {
-    fetch("/api/vans")
-      .then((data) => {
-        return data.json();
-      })
-      .then((van) => {
-        setVans(van.vans);
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   return (
     <div

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import "./Server";
 import Vans from "./components/Vans";
+import VanDetails from "./components/VanDetails";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Vans" element={<Vans />} />
+        <Route path="/Vans/:id" element={<VanDetails />} />
       </Routes>
       <Footer />
     </div>

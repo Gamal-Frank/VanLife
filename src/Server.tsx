@@ -27,5 +27,10 @@ createServer({
             const id = request.params.id
             return schema.find("Vans",id)
         })
+
+        this.get("/vans/:type", (schema, request) => {
+            const type = request.params.type
+            return schema.find("Vans",type)
+        })
     }
 })
