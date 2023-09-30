@@ -6,12 +6,13 @@ interface card {
   type: string;
   price: number;
   imageUrl: string;
-  filter: (type?:string) => void;
+  filter: (type?: string) => void;
 }
 const Van = (props: card) => {
   const [bgColor, setBgColor] = useState({
     backgroundColor: "",
   });
+
   useEffect(() => {
     if (props.type === "simple") {
       setBgColor({ ...bgColor, backgroundColor: "#E17654" });
@@ -20,7 +21,7 @@ const Van = (props: card) => {
     } else {
       setBgColor({ ...bgColor, backgroundColor: "#161616" });
     }
-  }, []);
+  }, [props.type]);
 
   return (
     <div>
