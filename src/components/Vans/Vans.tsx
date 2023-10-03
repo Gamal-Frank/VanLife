@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import Van from "./van";
-import { MyContext, van } from "../Context.tsx/Context";
+import { MyContext, van } from "../../Context.tsx/Context";
 const Vans = () => {
   const vans = useContext(MyContext);
   const [filterdVans, setFilterdVans] = useState<van[]>([]);
