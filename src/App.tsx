@@ -10,10 +10,10 @@ import Reviews from "./components/Host/HostComponents/Reviews";
 import HostLayout from "./components/Host/HostLayout";
 import DashBoard from "./components/Host/HostComponents/DashBoard";
 import HostVans from "./components/Host/HostComponents/HostVans";
-import Details from "./components/Host/HostComponents/IndividualVan/details";
 import HostVan from "./components/Host/HostComponents/IndividualVan/HostVan";
 import Pricing from "./components/Host/HostComponents/IndividualVan/Pricing";
 import Photos from "./components/Host/HostComponents/IndividualVan/Photos";
+import Details from "./components/Host/HostComponents/IndividualVan/Details";
 
 function App() {
   return (
