@@ -60,7 +60,9 @@ const HostVan = () => {
             </h2>
           </div>
         </div>
-        <IndNav id={van?.id} />
+        <div className="">
+          <IndNav id={van?.id} />
+        </div>
         <Outlet />
       </div>
     </div>

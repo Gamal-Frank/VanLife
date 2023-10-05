@@ -7,7 +7,7 @@ const HostVans = () => {
 
   return (
     <div>
-      <div className="text-[#161616] mt-5 flex justify-between px-10">
+      <div className="text-[#161616] mt-9 flex justify-between px-10">
         <h1 className="font-bold text-[24px]">Your listed vans</h1>
         <button className="text-[16px]">View all</button>
       </div>

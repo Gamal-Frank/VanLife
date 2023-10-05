@@ -4,9 +4,9 @@ interface props{
 }
 const IndNav = (props:props) => {
   return (
-    <div className="flex w-full justify-start pl-16 gap-10">
+    <div className="flex w-full justify-start  my-5 gap-10">
       <Link className=" hover:underline font-bold" to={`/Host/vans/${props.id}/`}>
-        Detials
+        Details
       </Link>
       <Link className=" hover:underline font-bold" to={`/Host/vans/${props.id}/pricing`}>
         Pricing
