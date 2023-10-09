@@ -31,8 +31,9 @@ const HostVan = () => {
   return (
     <div>
       <Link
-        className=" flex my-10 items-center gap-2 justify-center w-[142px] h-[23px]"
-        to={`/Host/vans`}
+        className=" ml-5 flex my-10 items-center gap-2 justify-center w-[142px] h-[23px]"
+        to={`..`}
+        relative="path"
       >
         <img className="h-[10px]" src="/Arrow 1.png" alt="" />
         <h3 className=" inline text-[16px] font-medium hover:underline">
@@ -61,9 +62,9 @@ const HostVan = () => {
           </div>
         </div>
         <div className="">
-          <IndNav id={van?.id} />
+          <IndNav />
         </div>
-        <Outlet />
+        <Outlet context={van} />
       </div>
     </div>
   );

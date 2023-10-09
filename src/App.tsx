@@ -21,18 +21,18 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Vans" element={<Vans />} />
-          <Route path="/Vans/:id" element={<VanDetails />} />
-          <Route path="/Host" element={<HostLayout />}>
-            <Route path="/Host/income" element={<Income />} />
-            <Route path="/Host/reviews" element={<Reviews />} />
-            <Route path="/Host" element={<DashBoard />} />
-            <Route path="/Host/vans" element={<HostVans />} />
-            <Route path="/Host/vans/:id" element={<HostVan />}>
-              <Route path="/Host/vans/:id/" element={<Details />} />
-              <Route path="/Host/vans/:id/pricing" element={<Pricing />} />
-              <Route path="/Host/vans/:id/photos" element={<Photos />} />
+          <Route path="About" element={<About />} />
+          <Route path="vans" element={<Vans />} />
+          <Route path="vans/:id" element={<VanDetails />} />
+          <Route path="Host" element={<HostLayout />}>
+            <Route path="income" element={<Income />} />
+            <Route path="reviews" element={<Reviews />} />
+            <Route index element={<DashBoard />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVan />}>
+              <Route index element={<Details />} />
+              <Route path="pricing" element={<Pricing />} />
+              <Route path="photos" element={<Photos />} />
             </Route>
           </Route>
         </Route>

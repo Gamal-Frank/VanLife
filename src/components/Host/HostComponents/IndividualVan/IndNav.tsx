@@ -1,19 +1,36 @@
-import { Link } from "react-router-dom";
-interface props{
-  id:string | undefined
-}
-const IndNav = (props:props) => {
+import { NavLink } from "react-router-dom";
+
+const IndNav = () => {
   return (
     <div className="flex w-full justify-start  my-5 gap-10">
-      <Link className=" hover:underline font-bold" to={`/Host/vans/${props.id}/`}>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        end
+        className=" hover:underline font-bold"
+        to={`.`}
+      >
         Details
-      </Link>
-      <Link className=" hover:underline font-bold" to={`/Host/vans/${props.id}/pricing`}>
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        className=" hover:underline font-bold"
+        to={`pricing`}
+      >
         Pricing
-      </Link>
-      <Link className=" hover:underline font-bold"  to={`/Host/vans/${props.id}/photos`}>
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        className=" hover:underline font-bold"
+        to={`photos`}
+      >
         Photos
-      </Link>
+      </NavLink>
     </div>
   );
 };

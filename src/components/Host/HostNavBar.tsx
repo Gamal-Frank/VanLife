@@ -1,20 +1,45 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HostNavBar = () => {
   return (
     <div className="flex w-full justify-start pl-16 gap-10">
-      <Link className=" hover:underline font-bold" to="/Host">
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        className=" hover:underline font-bold"
+        to="."
+        end
+      >
         Dashboard
-      </Link>
-      <Link className=" hover:underline font-bold" to="/Host/Income">
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        className=" hover:underline font-bold"
+        to="Income"
+      >
         Income
-      </Link>
-      <Link className=" hover:underline font-bold" to="/Host/Vans">
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        className=" hover:underline font-bold"
+        to="Vans"
+      >
         Vans
-      </Link>
-      <Link className=" hover:underline font-bold" to="/Host/Reviews">
+      </NavLink>
+      <NavLink
+        style={({ isActive }) =>
+          isActive ? { textDecoration: "underline" } : {}
+        }
+        className=" hover:underline font-bold"
+        to="Reviews"
+      >
         Reviews
-      </Link>
+      </NavLink>
     </div>
   );
 };

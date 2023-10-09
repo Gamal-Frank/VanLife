@@ -1,19 +1,9 @@
-import { useContext, useEffect, useState } from "react";
-import { MyContext, van } from "../../../../Context.tsx/Context";
-import { useParams } from "react-router-dom";
-import { param } from "../../../Vans/VanDetails";
+import { useOutletContext } from "react-router-dom";
+import { van } from "../../../../Context.tsx/Context";
 
 const Details = () => {
-  const vans = useContext(MyContext);
-  const paramId = useParams();
-  const [van, setVan] = useState<van>();
-  useEffect(() => {
-    for (const van of vans) {
-      if (van.id === (paramId as unknown as param).id) {
-        setVan(van);
-      }
-    }
-  }, [vans]);
+  const van = useOutletContext() as van;
+  
 
   return (
     <div className="flex flex-col gap-5">
