@@ -14,7 +14,7 @@ const HostVans = () => {
       <div className="flex flex-wrap">
         {vans.map((van, index) => {
           return (
-            <Link to={`/Host/vans/${van.id}`}
+            <Link to={`${van.id}`}
               className=" flex justify-between items-center ml-14 my-3 w-[495px] h-[102px] rounded-[6px] bg-[#FFFFFF]"
               key={index}
             >
@@ -35,7 +35,7 @@ const HostVans = () => {
             </Link>
           );
         })}
-      </div>{" "}
+      </div>
     </div>
   );
 };

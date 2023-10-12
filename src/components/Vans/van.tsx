@@ -8,6 +8,8 @@ interface card {
   price: number;
   imageUrl: string;
   filter: (type?: string) => void;
+  searchParams: URLSearchParams;
+  typeFilter:string | null
 }
 const Van = (props: card) => {
   const [bgColor, setBgColor] = useState({
@@ -26,7 +28,7 @@ const Van = (props: card) => {
 
   return (
     <div>
-      <Link to={`/vans/${props.id}`}>
+      <Link state={{ searchParams: `?${props.searchParams.toString()}`,type:props.typeFilter }} to={`${props.id}`}>
         <img
           src={props.imageUrl}
           className=" w-[230px] rounded-[5px] h-[230px]"

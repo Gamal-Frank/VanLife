@@ -9,7 +9,7 @@ const rev = [
     name: "Sandy",
     date: "November 23,2022",
     text: "This is our third time using the Modest Explorer for our travels and we love it! No complaints, absolutely perfect!",
-    stars: 5,
+    stars: 3,
   },
 ];
 const Reviews = () => {
